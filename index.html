@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NayePankh Foundation | Empowering Lives</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">NayePankh</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#impact">Impact</a></li>
+        </ul>
+        <button id="theme-toggle">Toggle Dark Mode</button>
+    </nav>
+
+    <header class="hero" id="home">
+        <h1>Spread Your Wings with NayePankh</h1>
+        <p>Helping the underprivileged fly towards a better future.</p>
+        <button class="btn">Donate Now</button>
+    </header>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>NayePankh Foundation is one of the leading NGOs helping the underprivileged section of society. We focus on
+            continuous visual improvement and transparent help structures.</p>
+    </section>
+
+    <section id="impact">
+        <h2>Our Impact</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Education</h3>
+                <p>Providing books, stationery, and tuition support to underprivileged children.</p>
+            </div>
+            <div class="card">
+                <h3>Healthcare</h3>
+                <p>Organizing free health checkup camps and providing essential medicines.</p>
+            </div>
+            <div class="card">
+                <h3>Environment</h3>
+                <p>Conducting weekly tree plantation and awareness drives in communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                toggleBtn.innerText = "Toggle Dark Mode";
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                toggleBtn.innerText = "Toggle Light Mode";
+            }
+        });
+    </script>
+</body>
+
+</html>
